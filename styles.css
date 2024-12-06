@@ -1,0 +1,351 @@
+/* 
+Alyssa Hensley
+*/
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+    --transition-speed: 0.3s ease;
+}
+
+/* Reset  */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu,
+nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    font-family: "Montserrat", sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--purple);
+}
+
+img, picture {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* General */
+h1, h2, h3 {
+    font-family: "Molle", cursive;
+    letter-spacing: 0.05em;
+}
+
+h4, p, q, small, nav, button, form, label, input, select {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.8;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.25rem; }
+p, q { font-size: 1rem; }
+label { font-size: 1rem; font-weight: bold; }
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--teal) 0%, var(--white) 100%);
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo img {
+    max-width: 150px;
+}
+
+#title {
+    text-align: center;
+}
+
+nav {
+    display: grid;
+    justify-self: end;
+    gap: 1rem;
+}
+
+nav label {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+    font-weight: bold;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+nav ul li a:hover {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+#intro {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    color: var(--black);
+}
+
+#intro h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+#intro-text {
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+#img-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    #img-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #img-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+#img-grid img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed);
+}
+
+#img-grid img:hover {
+    transform: scale(1.05);
+}
+
+#plan {
+    background-color: var(--yellow);
+    padding: 2rem;
+    text-align: center;
+}
+
+#plan h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#plan div {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    #plan div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #plan div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+#plan section {
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+#plan section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#testimonials {
+    background: var(--white);
+    padding: 2rem;
+    text-align: center;
+}
+
+#testimonials div {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    #testimonials div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #testimonials div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+#testimonials section {
+    background: var(--white);
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+#testimonials section:hover {
+    transform: scale(1.02);
+    box-shadow: none;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#about {
+    background-color: var(--teal);
+    padding: 2rem;
+    color: var(--black);
+    text-align: center;
+}
+
+#about h3 {
+    color: var(--black);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#about div {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    #about div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+#about img {
+    margin-bottom: 1rem;
+    width: 60px; 
+    height: auto;
+}
+
+#about h4 {
+    color: var(--black);
+    margin-top: 0.5rem;
+}
+
+#about p {
+    color: var(--black);
+    font-size: 1rem;
+}
+
+#contact {
+    background: var(--white);
+    padding: 2rem;
+    text-align: center;
+    color: var(--black);
+}
+
+#contact form {
+    display: grid;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact input, #contact select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid var(--purple);
+    border-radius: 5px;
+}
+
+#contact input:focus, #contact select:focus {
+    outline: none;
+    border-color: var(--yellow);
+    box-shadow: 0 0 5px var(--yellow);
+}
+
+#mySubmit {
+    background: var(--purple);
+    color: var(--white);
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color var(--transition-speed);
+}
+
+#mySubmit:hover {
+    background: var(--blue);
+}
